@@ -1,9 +1,10 @@
 // get all btn
-const clickBtn    = document.querySelectorAll('.btn-grey');
+const clickBtn      = document.querySelectorAll('.btn-grey');
 console.log(clickBtn);
-const display     = document.querySelector(".display");
-const btnOperator = document.querySelectorAll('.btn-operator');
+const display       = document.querySelector(".display");
+const btnOperator   = document.querySelectorAll('.btn-operator');
 const equal_btn		= document.querySelector('.btn-equal');
+const clear_btn     = document.querySelector(".btn-clear");
 // set click event for number btn
 clickBtn.forEach(function(btnNum, index){
     btnNum.addEventListener("click", function(){
@@ -33,4 +34,9 @@ btnOperator.forEach(function(btnOp, index){
 
 equal_btn.addEventListener("click", function() {
 	display.textContent = eval(display.textContent);
+});
+
+clear_btn.addEventListener("click", function() {
+    display.textContent = "";
+
 });
