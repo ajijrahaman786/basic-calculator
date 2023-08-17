@@ -1,0 +1,39 @@
+body{
+    background-color: bisque;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 380px;
+    margin: auto;
+    background: #fff;
+}
+
+/* .btn-wrapper{
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+.display {
+    width: 100%;
+    padding: 50px 0;
+    background: #000;
+    color: #fff;
+    font-size: 3rem;
+    text-align: right;
+}
+
+.button-grid button {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 81px;
+    height: 70px;
+    margin: 5px;
+}
