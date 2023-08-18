@@ -5,6 +5,8 @@ const display       = document.querySelector(".display");
 const btnOperator   = document.querySelectorAll('.btn-operator');
 const equal_btn		= document.querySelector('.btn-equal');
 const clear_btn     = document.querySelector(".btn-clear");
+
+let flag = false;
 // set click event for number btn
 clickBtn.forEach(function(btnNum, index){
     btnNum.addEventListener("click", function(){
@@ -13,6 +15,7 @@ clickBtn.forEach(function(btnNum, index){
         console.log(btnVal);
 
         display.textContent += btnVal;
+
 
     });
 
@@ -23,9 +26,16 @@ clickBtn.forEach(function(btnNum, index){
 
 btnOperator.forEach(function(btnOp, index){
     btnOp.addEventListener("click", function(){
-        let operatorVal = document.getElementById(`operator${index+1}`).value;
-        console.log(operatorVal);
+        let operatorVal =btnOp.value;
+
+        // let operatorDot = document.getElementById("dotOperator").value;
+
+        if(flag){
+            return
+        }
+
         display.textContent += operatorVal;
+        flag = true;
 
     });
 
@@ -37,5 +47,5 @@ equal_btn.addEventListener("click", function() {
 });
 
 clear_btn.addEventListener("click", function() {
-    display.textContent = "";
+    location.reload();
 });
