@@ -38,5 +38,4 @@ equal_btn.addEventListener("click", function() {
 
 clear_btn.addEventListener("click", function() {
     display.textContent = "";
-
 });
